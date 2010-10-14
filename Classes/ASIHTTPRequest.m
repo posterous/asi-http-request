@@ -2153,10 +2153,10 @@ static NSOperationQueue *sharedQueue = nil;
 {
 // Mac authentication dialog coming soon!
 #if TARGET_OS_IPHONE
-	if ([self shouldPresentProxyAuthenticationDialog]) {
-		[ASIAuthenticationDialog performSelectorOnMainThread:@selector(presentAuthenticationDialogForRequest:) withObject:self waitUntilDone:[NSThread isMainThread]];
-		return YES;
-	}
+//	if ([self shouldPresentProxyAuthenticationDialog]) {
+//		[ASIAuthenticationDialog performSelectorOnMainThread:@selector(presentAuthenticationDialogForRequest:) withObject:self waitUntilDone:[NSThread isMainThread]];
+//		return YES;
+//	}
 	return NO;
 #else
 	return NO;
@@ -2340,10 +2340,10 @@ static NSOperationQueue *sharedQueue = nil;
 {
 // Mac authentication dialog coming soon!
 #if TARGET_OS_IPHONE
-	if ([self shouldPresentAuthenticationDialog]) {
-		[ASIAuthenticationDialog performSelectorOnMainThread:@selector(presentAuthenticationDialogForRequest:) withObject:self waitUntilDone:[NSThread isMainThread]];
-		return YES;
-	}
+//	if ([self shouldPresentAuthenticationDialog]) {
+//		[ASIAuthenticationDialog performSelectorOnMainThread:@selector(presentAuthenticationDialogForRequest:) withObject:self waitUntilDone:[NSThread isMainThread]];
+//		return YES;
+//	}
 	return NO;
 #else
 	return NO;

@@ -14,7 +14,6 @@
 		FEC950FE11F947A0001E09B3 /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC950EE11F947A0001E09B3 /* ASIHTTPRequestDelegate.h */; };
 		FEC950FF11F947A0001E09B3 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC950EF11F947A0001E09B3 /* ASIProgressDelegate.h */; };
 		FEC9510011F947A0001E09B3 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC950F011F947A0001E09B3 /* ASIAuthenticationDialog.h */; };
-		FEC9510111F947A0001E09B3 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC950F111F947A0001E09B3 /* ASIAuthenticationDialog.m */; };
 		FEC9510211F947A0001E09B3 /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC950F211F947A0001E09B3 /* ASIInputStream.h */; };
 		FEC9510311F947A0001E09B3 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC950F311F947A0001E09B3 /* ASIInputStream.m */; };
 		FEC9510411F947A0001E09B3 /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC950F411F947A0001E09B3 /* ASIFormDataRequest.h */; };
@@ -312,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEC9510111F947A0001E09B3 /* ASIAuthenticationDialog.m in Sources */,
 				FEC9510311F947A0001E09B3 /* ASIInputStream.m in Sources */,
 				FEC9510511F947A0001E09B3 /* ASIFormDataRequest.m in Sources */,
 				FEC9510711F947A0001E09B3 /* ASIHTTPRequest.m in Sources */,
@@ -379,7 +377,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = 4.2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -393,6 +391,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = 4.2;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "-ObjC";
