@@ -1801,17 +1801,17 @@ static NSOperationQueue *sharedQueue = nil;
 	if (!CFHTTPMessageIsHeaderComplete(message)) {
 		CFRelease(message);
 		return;
-	}
-
-	#if DEBUG_REQUEST_STATUS
-	if ([self totalBytesSent] == [self postLength]) {
-		NSLog(@"Request %@ received response headers",self);
-	}
-	#endif		
+	}	
 
 	CFDictionaryRef headerFields = CFHTTPMessageCopyAllHeaderFields(message);
 	[self setResponseHeaders:(NSDictionary *)headerFields];
-
+    
+#if DEBUG_REQUEST_STATUS
+	if ([self totalBytesSent] == [self postLength]) {
+		NSLog(@"Request %@ received response headers: %@",self,(NSDictionary *)headerFields);
+	}
+#endif
+	
 	CFRelease(headerFields);
 	
 	[self setResponseStatusCode:(int)CFHTTPMessageGetResponseStatusCode(message)];
