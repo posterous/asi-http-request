@@ -17,7 +17,10 @@
 
 	// Will be called when a request starts with the request as the argument
 	SEL requestDidStartSelector;
-	
+
+    // Will be called when a request retries
+	SEL requestDidRetrySelector;
+    
 	// Will be called when a request receives response headers with the request as the argument
 	SEL requestDidReceiveResponseHeadersSelector;
 	
@@ -84,6 +87,7 @@
 @property (assign, nonatomic, setter=setDownloadProgressDelegate:) id downloadProgressDelegate;
 
 @property (assign) SEL requestDidStartSelector;
+@property (assign) SEL requestDidRetrySelector;
 @property (assign) SEL requestDidReceiveResponseHeadersSelector;
 @property (assign) SEL requestDidFinishSelector;
 @property (assign) SEL requestDidFailSelector;
