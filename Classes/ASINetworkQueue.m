@@ -186,6 +186,13 @@
 	}
 }
 
+- (void)requestRetrying:(ASIHTTPRequest *)request
+{
+	if ([self requestDidRetrySelector]) {
+		[[self delegate] performSelector:[self requestDidRetrySelector] withObject:request];
+	}
+}
+
 - (void)requestReceivedResponseHeaders:(ASIHTTPRequest *)request
 {
 	if ([self requestDidReceiveResponseHeadersSelector]) {

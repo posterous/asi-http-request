@@ -1267,7 +1267,6 @@ static NSOperationQueue *sharedQueue = nil;
 	if ([self shouldTimeOut]) {			
 		// Do we need to auto-retry this request?
 		if ([self numberOfTimesToRetryOnTimeout] > [self retryCount]) {
-
 			// If we are resuming a download, we may need to update the Range header to take account of data we've just downloaded
 			[self updatePartialDownloadSize];
 			if ([self partialDownloadSize]) {
@@ -1276,6 +1275,11 @@ static NSOperationQueue *sharedQueue = nil;
 			[self setRetryCount:[self retryCount]+1];
 			[self unscheduleReadStream];
 			[[self cancelledLock] unlock];
+            
+            if ([delegate respondsToSelector:@selector(requestRetrying:)]) {
+                [delegate performSelectorOnMainThread:@selector(requestRetrying:) withObject:self waitUntilDone:YES];
+            }
+            
 			[self startRequest];
 			return;
 		}

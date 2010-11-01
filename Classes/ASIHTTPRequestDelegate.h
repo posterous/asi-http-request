@@ -19,6 +19,7 @@
 - (void)requestFinished:(ASIHTTPRequest *)request;
 - (void)requestFailed:(ASIHTTPRequest *)request;
 - (void)requestCanceled:(ASIHTTPRequest *)request;
+- (void)requestRetrying:(ASIHTTPRequest *)request;
 
 // When a delegate implements this method, it is expected to process all incoming data itself
 // This means that responseData / responseString / downloadDestinationPath etc are ignored
