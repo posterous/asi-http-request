@@ -1277,7 +1277,7 @@ static NSOperationQueue *sharedQueue = nil;
 			[[self cancelledLock] unlock];
             
             if ([delegate respondsToSelector:@selector(requestRetrying:)]) {
-                [delegate performSelectorOnMainThread:@selector(requestRetrying:) withObject:self waitUntilDone:YES];
+                [(NSObject *)delegate performSelectorOnMainThread:@selector(requestRetrying:) withObject:self waitUntilDone:YES];
             }
             
 			[self startRequest];
