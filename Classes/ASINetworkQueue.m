@@ -322,6 +322,7 @@
 @synthesize requestDidReceiveResponseHeadersSelector;
 @synthesize requestDidFinishSelector;
 @synthesize requestDidFailSelector;
+@synthesize requestDidRetrySelector;
 @synthesize queueDidFinishSelector;
 @synthesize delegate;
 @synthesize showAccurateProgress;
