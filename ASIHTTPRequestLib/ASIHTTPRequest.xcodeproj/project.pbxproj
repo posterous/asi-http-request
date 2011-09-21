@@ -364,6 +364,7 @@
 				GCC_VERSION = "";
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ASIHTTPRequest;
+				SDKROOT = iphoneos4.3;
 				SKIP_INSTALL = YES;
 			};
 			name = Adhoc;
@@ -384,6 +385,7 @@
 				GCC_VERSION = "";
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ASIHTTPRequest;
+				SDKROOT = iphoneos4.3;
 			};
 			name = Debug;
 		};
@@ -402,6 +404,7 @@
 				GCC_VERSION = "";
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = ASIHTTPRequest;
+				SDKROOT = iphoneos4.3;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
